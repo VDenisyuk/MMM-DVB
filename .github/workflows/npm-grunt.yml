@@ -2,9 +2,12 @@ name: Grunt
 
 on:
   push:
-    branches: [ "main", "cache" ]
+    branches: 
+      - main
+      - cache
   pull_request:
-    branches: [ "main", "cache" ]
+    branches: 
+      - main
 
 jobs:
   build:
