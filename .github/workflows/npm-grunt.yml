@@ -2,9 +2,12 @@ name: Grunt
 
 on:
   push:
-    branches: [ "main", "cache" ]
+    branches: 
+      - main
+      - cache
   pull_request:
-    branches: [ "main", "cache" ]
+    branches: 
+      - main
 
 jobs:
   build:
@@ -12,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [18.x, 19.x]
 
     steps:
     - uses: actions/checkout@v3
